@@ -1,4 +1,4 @@
-## Student Self-Attestation & Delivery Compliance Checklist
+## Self-Attestation & Delivery Compliance Checklist
 
 ### 1. Repository Organization & Structure
 - [x] Dedicated `/rtl` directory containing synthesizable source files (`amtgc_top.v`, sub-modules).
