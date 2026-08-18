@@ -1,0 +1,21 @@
+add wave -divider "System Controls"
+add wave /tb_amtgc_adaptive/clk
+add wave /tb_amtgc_adaptive/reset
+add wave -radix unsigned /tb_amtgc_adaptive/traffic_density_A
+add wave -radix unsigned /tb_amtgc_adaptive/traffic_density_B
+
+add wave -divider "Junction A State & Lights"
+add wave -radix unsigned /tb_amtgc_adaptive/dut/A/current_state
+add wave -radix unsigned /tb_amtgc_adaptive/dut/A/green_time_dynamic
+add wave /tb_amtgc_adaptive/NS_green_A
+add wave /tb_amtgc_adaptive/NS_yellow_A
+add wave /tb_amtgc_adaptive/NS_red_A
+add wave /tb_amtgc_adaptive/EW_green_A
+
+add wave -divider "Junction B State & Lights"
+add wave -radix unsigned /tb_amtgc_adaptive/dut/B/current_state
+add wave -radix unsigned /tb_amtgc_adaptive/dut/B/green_time_dynamic
+add wave /tb_amtgc_adaptive/NS_green_B
+add wave /tb_amtgc_adaptive/NS_yellow_B
+add wave /tb_amtgc_adaptive/NS_red_B
+add wave /tb_amtgc_adaptive/EW_green_B
