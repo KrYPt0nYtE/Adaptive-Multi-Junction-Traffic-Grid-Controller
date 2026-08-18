@@ -1,1 +1,101 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# Loading project AMTGC
+# Compile of tb_amtgc_top.v was successful.
+# Compile of amtgc_top.v was successful.
+# Compile of ped_arbiter.v was successful.
+# Compile of tb_generic_timer.v was successful.
+# Compile of generic_timer.v was successful.
+# Compile of tb_junction_controller.v was successful.
+# Compile of junction_controller.v was successful.
+# Compile of tb_amtgc_adaptive.v was successful.
+# Compile of tb_amtgc_final_verification.v was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui work.tb_amtgc_final_verification
+# vsim -gui work.tb_amtgc_final_verification 
+# Start time: 22:32:39 on Aug 17,2026
+# Loading work.tb_amtgc_final_verification
+# Loading work.amtgc_top
+# Loading work.junction_controller
+# Loading work.generic_timer
+# Loading work.ped_arbiter
+run -all
+# =========================================================================
+#          TASK 5: FULL SYSTEM TEST SUITE (TC01 to TC15 EXECUTION)         
+# =========================================================================
+# 
+# [0 ns] >>> RUNNING [TC01]: Power-On Reset Initialization
+# [20000 ns] >>> PASS [TC01]: Controllers successfully initialised to default state!
+# 
+# [20000 ns] >>> RUNNING [TC02]: Normal Traffic Light Sequencing
+# 
+# [885000 ns] --> Junction A entered NS_GREEN
+# 
+# [1205000 ns] --> Junction A entered NS_YELLOW
+# 
+# [1315000 ns] --> Junction A entered EW_GREEN
+# 
+# [1635000 ns] --> Junction A entered EW_YELLOW
+# [1635000 ns] [PASS] TC02: Normal traffic light progression sequence verified.
+# 
+# [1635000 ns] >>> RUNNING [TC03]: Continuous Cyclic Operation
+# [3035000 ns] [PASS] TC03: System cycled continuously across multiple loops without deadlock.
+# 
+# [3035000 ns] >>> RUNNING [TC04]: High Traffic Density at Junction A
+# [3985000 ns] [PASS] TC04: Junction A dynamically extended green light duration.
+# 
+# [3985000 ns] >>> RUNNING [TC05]: High Traffic Density at Junction B (Max Clamp Cap)
+# [5195000 ns] [PASS] TC05: Junction B green time capped strictly at MAX_GREEN.
+# 
+# [5195000 ns] >>> RUNNING [TC06]: Single Pedestrian Request at Junction A
+# [5995000 ns] [PASS] TC06: Pedestrian crossing served at Junction A.
+# 
+# [5995000 ns] >>> RUNNING [TC07]: Single Pedestrian Request at Junction B
+# [6935000 ns] [PASS] TC07: Pedestrian crossing served at Junction B.
+# 
+# [6935000 ns] >>> RUNNING [TC08]: Simultaneous Pedestrian Arbitration
+# [6945000 ns] [PASS] TC08: Simultaneous pedestrian requests arbitrated sequentially.
+# 
+# [6945000 ns] >>> RUNNING [TC09]: Starvation Prevention Over 100+ Repeated Requests
+# [8195000 ns] [PASS] TC09: Completed 105 transactions. Verified Round-Robin fairness.
+# 
+# [8195000 ns] >>> RUNNING [TC10]: Green-Wave Timing Across 5 Density Combinations
+# [9155000 ns]   - Swept Density Pair (A: 0, B: 1)
+# [9945000 ns]   - Swept Density Pair (A: 1, B: 2)
+# [11675000 ns]   - Swept Density Pair (A: 2, B: 3)
+# [12585000 ns]   - Swept Density Pair (A: 3, B: 4)
+# [13555000 ns]   - Swept Density Pair (A: 4, B: 5)
+# [13555000 ns] [PASS] TC10: Green-Wave synchronization maintained across 5 density combinations.
+# 
+# [13555000 ns] >>> RUNNING [TC11]: Emergency Override Triggered in All 7 FSM States
+# [17225000 ns] [PASS] TC11: Overrode every operational state directly to All-Red within 1 cycle.
+# 
+# [17225000 ns] >>> RUNNING [TC12]: Emergency Deassertion & Safe ALL_RED Resumption
+# [17286000 ns] [PASS] TC12: Resumed through intermediate ALL_RED buffer to prevent collision.
+# 
+# [17286000 ns] >>> RUNNING [TC13]: Active Mid-Simulation Reset Assertion
+# [17406000 ns] [PASS] TC13: System gracefully reinitialized to default state during active operation.
+# 
+# [17406000 ns] >>> RUNNING [TC14]: Rapid Emergency Override Glitch Stress Test
+# [17506000 ns] [PASS] TC14: System survived back-to-back emergency toggle without lockup.
+# 
+# [17506000 ns] >>> RUNNING [TC15]: Constrained-Random Stability Run (120 Cycles)
+# [19005000 ns] [PASS] TC15: Completed 120 randomized cycles with zero assertion failures.
+# 
+# =========================================================================
+#                TASK 5 AUTOMATED VERIFICATION SCOREBOARD                  
+# =========================================================================
+#  Total Continuous Assertions Checked : 7615
+#  Total Safety Violations / Errors    : 0
+#  Junction A Pedestrian Grants Served : 9
+#  Junction B Pedestrian Grants Served : 3
+# -------------------------------------------------------------------------
+#  Test Scenarios Verified (TC01-TC15) : 15 / 15 COVERED (100%)
+# -------------------------------------------------------------------------
+# 
+#  >>> FINAL VERIFICATION STATUS: PASSED (100% TEST COVERAGE) <<< 
+# 
+# ** Note: $finish    : C:/GEC/BE/SEM VII/Internship/AMTGC_project/Project/work/tb_amtgc_final_verification.v(337)
+#    Time: 19005 ns  Iteration: 0  Instance: /tb_amtgc_final_verification
+# 1
+# Break in Module tb_amtgc_final_verification at C:/GEC/BE/SEM VII/Internship/AMTGC_project/Project/work/tb_amtgc_final_verification.v line 337
 
